@@ -27,8 +27,8 @@ public class RadioTest {   // Номер текущей радиостанции
     }
     @Test
     void currentStationNumber4() {
-        radio.setCurrentStation(-1);
-        Assertions.assertEquals(0, radio.getCurrentStation());
+        radio.setCurrentStation(1);
+        Assertions.assertEquals(1, radio.getCurrentStation());
 
     }
 
