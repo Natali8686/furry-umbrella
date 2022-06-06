@@ -14,12 +14,8 @@ public class Radio {
         return amountStation;
     }
 
-    public int getMinStation() {
-        return minStation;
-    }
 
-    public Radio(int minStation, int amountStation) {
-        this.minStation = minStation;
+    public Radio(int amountStation) {
         this.amountStation = amountStation;
 
     }
@@ -88,9 +84,6 @@ public class Radio {
         currentVolume--;
     }
 
-    public void setCurrentVolume(int currentVolume) {
-        this.currentVolume = currentVolume;
-    }
 }
 
 

@@ -19,9 +19,21 @@ public class RadioTest {   // Номер текущей радиостанции
         Assertions.assertEquals(0, radio.getCurrentStation());
 
     }
-
     @Test
     void currentStationNumber3() {
+        radio.setCurrentStation(10);
+        Assertions.assertEquals(0, radio.getCurrentStation());
+
+    }
+    @Test
+    void currentStationNumber4() {
+        radio.setCurrentStation(-1);
+        Assertions.assertEquals(0, radio.getCurrentStation());
+
+    }
+
+    @Test
+    void currentStationNumber5() {
         radio.setCurrentStation(-1);
         Assertions.assertEquals(0, radio.getCurrentStation());
 
@@ -67,16 +79,36 @@ public class RadioTest {   // Номер текущей радиостанции
 
     @Test
     void findCurrentVolume() {
-        radio.setCurrentVolume(70);
+        radio.setCurrentVolumе(70);
         Assertions.assertEquals(70, radio.getCurrentVolume());
     }
 
     @Test
     void findCurrentVolume2() {
-        radio.setCurrentVolume(5);
+        radio.setCurrentVolumе(5);
         Assertions.assertEquals(5, radio.getCurrentVolume());
     }
+    @Test
+    void findCurrentVolume3() {
+        radio.setCurrentVolumе(0);
+        Assertions.assertEquals(0, radio.getCurrentVolume());
+    }
 
+    @Test
+    void findCurrentVolume4() {
+        radio.setCurrentVolumе(100);
+        Assertions.assertEquals(100, radio.getCurrentVolume());
+    }
+    @Test
+    void findCurrentVolume5() {
+        radio.setCurrentVolumе(101);
+        Assertions.assertEquals(0, radio.getCurrentVolume());
+    }
+    @Test
+    void findCurrentVolume6() {
+        radio.setCurrentVolumе(-1);
+        Assertions.assertEquals(0, radio.getCurrentVolume());
+    }
 
     @Test
     void turnUpTheVolume() {  // увеличение громкости
